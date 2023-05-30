@@ -1,8 +1,8 @@
 <?php
 
-require_once ("config.php");
+require_once ("estudiantes.php");
 
-$record = new Config();
+$record = new estudiantes();
 
 if (isset($_GET['id'])&& isset($_GET['req'])){
     if($_GET['req'] =="delete"){
