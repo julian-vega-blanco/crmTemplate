@@ -11,7 +11,7 @@ class RegistroUser extends Conectar{
     private $password;
 
 
-    public function __construct($id="0", $idCamper="0", $email="", $username="", $dbCnx=""){
+    public function __construct($id="0", $idCamper="0", $email="", $username="", $password="", $dbCnx=""){
 
     $this->id = $id;
     $this->idCamper = $idCamper;

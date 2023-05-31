@@ -3,33 +3,19 @@
 require_once("../Config/db.php");
 require_once("../Config/conectar.php");
 
-class estudiante extends conectar{
+class estudiante extends Conectar{
     private $id;
     private $nombres;
     private $direccion;
     private $logros;
-    private $skills;
-    private $review;
-    private $ser;
-    private $ingles;
-    private $especialidad;
 
-
-    
-
-
-    public function __construct($id= 0, $nombres="", $direccion="", $logros= "", $skills= "", $review="", $ser="", $ingles="", $especialidad="", $dbCnx=""){
+    public function __construct($id= 0, $nombres="", $direccion="", $logros= "", $dbCnx=""){
 
         $this ->id = $id;
         $this -> nombres = $nombres;
         $this -> direccion= $direccion;
         $this -> logros = $logros;
-        $this -> skills = $skills;
-        $this -> review = $review;
-        $this -> ser = $ser;
-        $this -> ingles = $ingles;
-        $this -> especialidad = $especialidad;
-        parent::__construct($dbCnx);
+        parent:: __construct($dbCnx);
 
         
 
@@ -69,51 +55,11 @@ class estudiante extends conectar{
         return $this -> logros;
     }
 
-    public function setSkills($skills){
-        $this ->skills =$skills;
-    }
-
-    public function getSkills(){
-        return $this -> skills;
-    }
-
-    public function setReview($review){
-        $this ->review =$review;
-    }
-
-    public function getReview(){
-        return $this -> review;
-    }
-
-    public function setSer($ser){
-        $this ->ser =$ser;
-    }
-
-    public function getSer(){
-        return $this -> ser;
-    }
-
-    public function setIngles($ingles){
-        $this ->ingles =$ingles;
-    }
-
-    public function getIngles(){
-        return $this -> ingles;
-    }
-
-    public function setEspecialidad($especialidad){
-        $this ->especialidad =$especialidad;
-    }
-
-    public function getEspecialidad(){
-        return $this -> especialidad;
-    }
-
     public function insertData(){
         try {
             $stm =$this-> dbCnx -> prepare("INSERT INTO campers(nombres, direccion, logros, skills, review, ser, ingles, especialidad) values(?,?,?,?,?,?,?,?)");
     
-            $stm-> execute([$this->nombres, $this->direccion, $this->logros, $this->review, $this->skills, $this->ser, $this->ingles, $this->especialidad ]);
+            $stm-> execute([$this->nombres, $this->direccion, $this->logros]);
           
         } catch (Exception $e) {
             return $e->getMessage();

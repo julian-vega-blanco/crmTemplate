@@ -50,7 +50,6 @@ $all = $data->obtainAll();
           <i class="bi bi-people"></i>
           <h3 style="margin: 0px;font-weight: 800;">Estudiantes</h3>
         </a>
-       
 
 
       </div>
@@ -75,7 +74,7 @@ $all = $data->obtainAll();
           <tbody class="" id="tabla">
 
             <!-- ///////Llenado DInamico desde la Base de Datos -->
-         
+
           <?php
           foreach ($all as $key => $val){
           ?>
@@ -104,10 +103,6 @@ $all = $data->obtainAll();
        <!-- ///////Generando la grafica -->
 
     </div>
-
-
-
-
 
     <!-- /////////Modal de registro de nuevo estuiante //////////-->
     <div class="modal fade" id="registrarEstudiantes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="backdrop-filter: blur(5px)">
