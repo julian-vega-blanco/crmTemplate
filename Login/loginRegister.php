@@ -23,7 +23,7 @@
             <div  class="d-flex justify-content-center align-items-center" >
                 <form action="loguearse.php" method="POST">
                     <div class="mb-3">
-                    <label for="campo" class="form-label">email</label>
+                    <label for="email" class="form-label">email</label>
                         <input 
                           type="email"
                           id="email"
@@ -37,7 +37,7 @@
                         <input 
                           type="password"
                           id="password"
-                          name="campasswordpo"
+                          name="password"
                           class="form-control"  
                         />
                     </div>
@@ -65,7 +65,7 @@
                 <form action="registrarse.php" method="POST">
                     <h1 class="m-5" style="font-weight: 800;">REGISTRAR USUARIO</h1>
                     <div class="mb-3">
-                    <label for="campo" class="form-label">email</label>
+                    <label for="email" class="form-label">email</label>
                         <input 
                           type="email"
                           id="email"

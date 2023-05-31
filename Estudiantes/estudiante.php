@@ -1,9 +1,9 @@
 <?php
 
-require_once("../Confing/db.php");
-require_once("../Confing/conectar.php");
+require_once("../Config/db.php");
+require_once("../Config/conectar.php");
 
-class Estudiantes extends conectar{
+class estudiante extends conectar{
     private $id;
     private $nombres;
     private $direccion;
@@ -13,6 +13,10 @@ class Estudiantes extends conectar{
     private $ser;
     private $ingles;
     private $especialidad;
+
+
+    
+
 
     public function __construct($id= 0, $nombres="", $direccion="", $logros= "", $skills= "", $review="", $ser="", $ingles="", $especialidad="", $dbCnx=""){
 
@@ -29,7 +33,7 @@ class Estudiantes extends conectar{
 
         
 
-        $this->dbCnx = new PDO(DB_TYPE.":host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PWD, [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC] );
+       // $this->dbCnx = new PDO(DB_TYPE.":host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PWD, [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC] );
     }
 
     //getter

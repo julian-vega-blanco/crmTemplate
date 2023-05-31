@@ -5,8 +5,8 @@ ini_set("display_startup_errors", 1);
 
 error_reporting(E_ALL); */
 
-require_once("config.php");
-$data = new estudiantes();
+require_once("estudiante.php");
+$data = new estudiante();
 
 $all = $data->obtainAll();
 
@@ -69,11 +69,6 @@ $all = $data->obtainAll();
               <th scope="col">NOMBRES</th>
               <th scope="col">DIRECCION</th>
               <th scope="col">LOGROS</th>
-              <th scope="col">SKILLS</th>
-              <th scope="col">REVIEW</th>
-              <th scope="col">SER</th>
-              <th scope="col">INGLÉS</th>
-              <th scope="col">ESPECIALIDAD</th>
               <th scope="col">BORRAR</th>
             </tr>
           </thead>
@@ -89,11 +84,6 @@ $all = $data->obtainAll();
             <td><?php echo $val ['nombres']?></td>
             <td><?php echo $val ['direccion']?></td>
             <td><?php echo $val ['logros']?></td>
-            <td><?php echo $val ['skills']?></td>
-            <td><?php echo $val ['review']?></td>
-            <td><?php echo $val ['ser']?></td>
-            <td><?php echo $val ['ingles']?></td>
-            <td><?php echo $val ['especialidad']?></td>
             <td>
               <a class="btn btn-danger" href="borrarEstudiantes.php?id=<?=$val['id']?>&req=delete">Borrar</a>
             </td>
@@ -160,55 +150,7 @@ $all = $data->obtainAll();
                 />
               </div>
 
-              <div class="mb-1 col-6 pl-1 pr-1">
-                <label for="skills" class="form-label">Skills</label>
-                <input 
-                  type="number"
-                  id="skills"
-                  name="skills"
-                  class="form-control"  
-                 
-                />
-              </div>
-
-              <div class="mb-1 col-6 pl-1 pr-1">
-                <label for="review" class="form-label">Review</label>
-                <input 
-                  type="number"
-                  id="review"
-                  name="review"
-                  class="form-control"  
-                 
-                />
-              </div>
-
-              <div class="mb-1 col-12 pl-1 pr-1" >
-              <label for="ser" class="form-label">Ser</label>
-                <select name="ser" id="ser" class="form-control">
-                  <option value="Angie">Angie</option>
-                  <option value="Vanessa">Vanessa</option>
-                </select>
-
-              </div>
-
-              <div class="mb-1 col-12 pl-1 pr-1" >
-              <label for="ingles" class="form-label">Inglés</label>
-                <select name="ingles" id="ingles" class="form-control">
-                  <option value="Fabio">Fabio</option>
-                  <option value="Diego">Diego</option>
-                </select>
-
-              </div>
-
-              <div class="mb-1 col-12 pl-1 pr-1" >
-              <label for="especialidad" class="form-label">Especialidad</label>
-                <select name="especialidad" id="especialidad" class="form-control">
-                  <option value="PHP">PHP</option>
-                  <option value="JavaScript">Javascript</option>
-                  <option value="HTML">Html</option>
-                  <option value="CSS">CSS</option>
-                  <option value="PYTHON">Python</option>
-                </select>
+              
 
               </div>
 
