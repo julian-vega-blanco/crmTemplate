@@ -4,8 +4,7 @@ if (!defined("DB_TYPE")){
 
 }
 
-if (!defined("DB_HOST")){
-    
+if (!defined("DB_HOST")){  
     define("DB_HOST", "localhost");
 }
 

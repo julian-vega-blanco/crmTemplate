@@ -1,3 +1,28 @@
+<?php
+require_once("estudiante.php");
+$data = new estudiante();
+
+
+$id = $_GET['id'];
+$data->setId($id);
+$record = $data->selectOne();
+$val = $record[0];
+echo "<br>";
+echo "<br>";
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 

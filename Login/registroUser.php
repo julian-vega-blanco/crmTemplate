@@ -61,47 +61,17 @@ public function getPassword(){
 return $this->password;
 }
 
-
-
-
+public function inserData(){
+    try {
+        $stm = $this -> dbCnx -> prepare("INSERT INTO users(idCamper. email, username, password)
+        values(?,?,?,?,?)");
+        $stm -> execute ([$this->idCamper, $this->email, $this->username, $this->password]);
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 ?>
